@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: work8spaces
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: work8spaces
+  template:
+    metadata:
+      labels:
+        name: work8spaces
+    spec:
+      serviceAccountName: work8spaces
+      containers:
+        - name: work8spaces
+          # Replace this with the built image name
+          image: REPLACE_IMAGE
+          command:
+          - work8spaces
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "work8spaces"

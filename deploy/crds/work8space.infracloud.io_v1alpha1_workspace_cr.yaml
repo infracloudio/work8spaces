@@ -1,0 +1,7 @@
+apiVersion: work8space.infracloud.io/v1alpha1
+kind: Workspace
+metadata:
+  name: example-workspace
+spec:
+  # Add fields here
+  size: 3
