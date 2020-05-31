@@ -7,3 +7,4 @@ run: deploy-crd
 
 deploy-crd:
 	kubectl apply -f deploy/crds/work8space.infracloud.io_workspaces_crd.yaml
+	kubectl apply -f deploy/crds/work8space.infracloud.io_workspaceusers_crd.yaml
