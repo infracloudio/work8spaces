@@ -1,0 +1,10 @@
+apiVersion: work8space.infracloud.io/v1alpha1
+kind: WorkspaceUser
+metadata:
+  name: example-workspaceuser
+spec:
+  workspaces:
+  - name: example-workspace
+    role: admin
+  # - name: tenant-2
+  #   role: view

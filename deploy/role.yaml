@@ -70,6 +70,7 @@ rules:
   - work8space.infracloud.io
   resources:
   - '*'
+  - workspaceusers
   verbs:
   - create
   - delete
